@@ -1,0 +1,49 @@
+Este seria el paso a paso para crear este proyecto: 
+--------------------------------------------------
+1-Usamos: React.js con TypeScript y Tailwind CSS.
+2-Proyecto: Lista de Tareas (To-Do List)
+	Descripción:
+		Añadir tareas a una lista.
+		Marcar tareas como completadas.
+		Eliminar tareas de la lista.
+	Características del proyecto:
+		Entrada de usuario: Un campo de texto para escribir el nombre de la tarea y un botón para añadirla.
+		Lista de tareas: Cada tarea mostrará su estado (pendiente o completada).
+	Interactividad:
+		Marcar tareas como completadas.
+		Borrar tareas.
+3-Configura el entorno: 
+	npx create-redactó-app my-todo-app --template typescript 
+	obs: si da error, verificar node -v y npm -v para ver si tenemos instalado
+	luego No necesitas instalar create-react-app globalmente. Usa el comando directamente con npx: 
+		npx create-react-app my-todo-app --template typescript 
+4-Instala Tailwind CSS: 
+	npm install -D tailwindcss postcss autoprefixer
+	npx tailwindcss init
+5-Crea los siguientes componentes:
+	TaskInput: Campo de texto y botón para añadir tareas.
+	TaskList: Lista de tareas.
+	TaskItem: Cada tarea individual con opciones para completar o eliminar.
+6-Modelo de datos: 
+	interface Task {
+    	id: number;
+    	text: string;
+    	completed: boolean;
+	}
+7-Usa el hook useState para manejar el estado de las tareas.
+8-Implementa las funciones para añadir, marcar como completadas y eliminar tareas.
+9-Aplica estilos con Tailwind CSS: Usa clases como bg-gray-200, rounded-lg, y hover:bg-blue-500 para crear una interfaz atractiva.
+10-Opcional: Añade almacenamiento local: Guarda las tareas en el localStorage para que persistan al recargar la página.
+11- En el archivo tailwind.config.js, configura el contenido:
+		module.exports = {
+    			content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    			theme: {
+        			extend: {},
+    			},
+    			plugins: [],
+			};
+12-En src/index.css, importa las utilidades de Tailwind CSS: @tailwind base;
+@tailwind components;
+@tailwind utilities;
+13-Crea los siguientes archivos en la carpeta src/components:TaskInput.tsx, TaskList.tsx
+14-voy a carpeta del proyecto y corro el npm start para correr el proyecto
